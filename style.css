@@ -4,8 +4,13 @@
   margin: 30px auto;
 
   display: grid;
-  grid-template-rows: 150px 150px;
-  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: repeat(2, 150px);
+  /* 1fr = 1 fraction of the available space */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Makes the 'middle' twice as big as the first and last columns */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+
   /* row-gap: 30px;
   column-gap: 30px; */
   gap: 30px;
