@@ -1,12 +1,13 @@
 /* Implicit vs Explicit Grids */
 .container-2 {
   width: 1000px;
+  height: 1000px;
   margin: 30px auto;
   background-color: #ddd;
 
   display: grid;
-  grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(2, 200px);
   gap: 15px;
 
   /* Styles implicit grids */
@@ -15,14 +16,19 @@
 
   /* Defines the remaining items flow (default: row) */
   /* grid-auto-flow: column; */
-  grid-auto-flow: row;
+  grid-auto-flow: row dense;
 
   /* 
     Align items inside in the grid areas/cells
     default: stretch (same as in flexbox)
-  */
+  
   align-items: center;
   justify-items: center;
+  */
+
+  /* Align grid tracks to grid container (same as in flexbox)*/
+  justify-content: space-around;
+  align-content: center;
 }
 
 .item-2 {
