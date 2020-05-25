@@ -1,14 +1,18 @@
-/* Using min-content, max-content and minmax() function */
+/* Using auto fill and auto fit*/
 .container-3 {
   width: 1000px;
+
   margin: 30px auto;
   background-color: #ddd;
 
   display: grid;
-  /* Fits the content in the grid cell/area */
-  /* grid-template-rows: repeat(2, max-content); */
-  grid-template-rows: minmax(100px, min-content);
-  grid-template-columns: max-content 1fr 1fr min-content;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  /* auto-fill creates tracks to fill the remaining container width */
+  grid-template-columns: repeat(auto-fill, 100px);
+
+  width: 90%;
+  /* auto-fit is similar to auto-fill but it collapses empty tracks */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .item-3 {
